@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Package Mangement</title>
+    <meta name="description" content="Package Management">
+    <meta name="author" content="Carl George">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!--<link rel="shortcut icon" type="image/png" href="images/favicon.png">-->
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+    <!--<link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">-->
+    <!--<link rel="stylesheet" href="../reveal.js/css/theme/blood.css" id="theme">-->
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Package Management</h1>
+        </section>
+
+        <section>
+          <section>
+            <h2>About the Presenter</h2>
+          </section>
+          <section>
+            <h2>About the Audience</h2>
+          </section>
+          <section>
+            <h2>About the Slides</h2>
+            <p><a href="http://lab.hakim.se/reveal-js/">reveal.js</a></p>
+          </section>
+        </section>
+
+        <section>
+          <!--<blockquote cite="http://ianmurdock.com/solaris/how-package-management-changed-everything/">
+            Package management is &ldquo;the single biggest advancement Linux has brought to the industry&rdquo;.
+            - Ian Murdock, founder of the Debian project
+          </blockquote>-->
+          <p>Package management is
+            <q cite="http://ianmurdock.com/solaris/how-package-management-changed-everything/">
+              &ldquo;the single biggest advancement Linux has brought to the industry&rdquo;
+            </q>
+            .
+          </p>
+          <p>- Ian Murdock, founder of the Debian project</p>
+        </section>
+        <!-- add section on advantages -->
+        <!-- https://fedoraproject.org/wiki/Package_management_system -->
+
+        <section>
+          <section>
+            <h2>Packages</h2>
+            <p class="fragment">A compressed archive that contains files and metadata.</p>
+            <p class="fragment">The files are usually for a specific application or library.</p>
+            <p class="fragment">Typical files include compiled binaries, scripts, and documentation.</p>
+            <p class="fragment">Installing a package places those files in the appropriate locations in the filesystem.</p>
+          </section>
+          <section>
+            <h2>Package Formats</h2>
+            <p class="fragment"></p>
+            <ul>
+              <li class="fragment"></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Metadata</h2>
+            <p class="fragment">A package's metadata describes several properties.</p>
+            <ul>
+              <li class="fragment">name</li>
+              <li class="fragment">description</li>
+              <li class="fragment">version</li>
+              <li class="fragment">release</li>
+              <li class="fragment">relationships to other packages</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Relationships</h2>
+            <ul>
+              <li class="fragment">requires</li>
+              <li class="fragment">conflicts</li>
+              <li class="fragment">provides</li>
+              <li class="fragment">obsoletes</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Package Mangement</h2>
+            <p class="fragment">Package managers are software tools that allow you to install and upgrade packages from remote sources.</p>
+            <p class="fragment">Of course, they also allow you to remove packages.</p>
+            <p class="fragment">Because they parse and interpret package metadata, they allow you to perform package transactions in a consistent, reliable manner.</p>
+          </section>
+          <section>
+            <h2>Package Managers</h2>
+            <ul>
+              <li class="fragment">yum</li>
+              <li class="fragment">apt</li>
+              <li class="fragment">pacman</li>
+              <li class="fragment">zypper</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Repositories</h2>
+            <p class="fragment">A remotely accessible collection of packages.</p>
+            <p class="fragment">They also contains summary metadata about the packages in the repository.</p>
+            <p class="fragment">A repository can be first party (from the distribution vendor) or third party.</p>
+          </section>
+        </section>
+
+        <!--
+        <section>
+          <section data-markdown='slides/tools.md'></section>
+          <section data-markdown='slides/tools-rpm.md'></section>
+          <section data-markdown='slides/tools-deb.md'></section>
+        </section>
+
+        <section>
+          <section data-markdown='slides/update-philosophies.md'></section>
+          <section data-markdown='slides/follow-upstream.md'></section>
+          <section data-markdown='slides/backporting.md'></section>
+        </section>
+        -->
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+
+        <section>
+          <h1>The End</h1>
+        </section>
+
+        <!--
+        <section>
+          <section>
+            <h2></h2>
+            <p class="fragment"></p>
+          </section>
+        </section>
+        -->
+
+      </div>
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
